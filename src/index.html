@@ -1,13 +1,147 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>Sample1</title>
-  <base href="/">
+  <title>Home</title>
+  <!-- <base href="/"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1> <span class="highlight">Dreams</span> Web Design</h1>
+        <!-- </div> -->
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">services</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section id="showcase">
+    <div class="container">
+      <h1>Affordable Prefessional Websites</h1>
+      <p>With it installed in the code editor you are using, you can type “lorem” and then tab and it will expand into a
+        paragraph of Lorem Ipsum placeholder text. But it can do more! You can control how much you get, place it within
+        HTML structure as it expands, and get different bits of it in repeated elements.</p>
+    </div>
+  </section>
+
+  <section id="newsletter">
+    <div class="container">
+      <h1>Subscribe to our Newletter</h1>
+      <form>
+        <input type="email" placeholder="Enter the email">
+        <button type="submit" class="button1">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="boxes">
+    <div class="container">
+      <div class="box">
+        <img src="./React.jpg">
+        <h3>HTML Markup</h3>
+        <p>With it installed in the code editor you are using, you can type “lorem” and then tab and it will expand into
+          a paragraph of Lorem Ipsum placeholder text. But it can do more! You can control how much you get, place it
+          within HTML structure as it expands, and get different bits of it in repeated elements.</p>
+      </div>
+      <div class="box">
+        <img src="./graphicdesign.jpg">
+        <h3>CSS Styling</h3>
+        <p>With it installed in the code editor you are using, you can type “lorem” and then tab and it will expand into
+          a paragraph of Lorem Ipsum placeholder text. But it can do more! You can control how much you get, place it
+          within HTML structure as it expands, and get different bits of it in repeated elements.</p>
+      </div>
+      <div class="box">
+        <img src="./maxdefault.jpg">
+        <h3>HTML Graphing Design</h3>
+        <p>With it installed in the code editor you are using, you can type “lorem” and then tab and it will expand into
+          a paragraph of Lorem Ipsum placeholder text. But it can do more! You can control how much you get, place it
+          within HTML structure as it expands, and get different bits of it in repeated elements.</p>
+      </div>
+      <div class="box">
+        <h2>My Phonebook</h2>
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+        <ul id="myUL">
+          <li><a href="#">Adele</a></li>
+          <li><a href="#">Agnes</a></li>
+
+          <li><a href="#">Billy</a></li>
+          <li><a href="#">Bob</a></li>
+
+          <li><a href="#">Calvin</a></li>
+          <li><a href="#">Christina</a></li>
+          <li><a href="#">Cindy</a></li>
+        </ul>
+
+        <script>
+          function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+              a = li[i].getElementsByTagName("a")[0];
+              txtValue = a.textContent || a.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+              } else {
+                li[i].style.display = "none";
+              }
+            }
+          }
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Greens Web Design, Copyright &copy; 2024</p>
+    <button type="button" style="color: rgb(81, 154, 74);" onclick="alert('Thank you for contacting us')">Contact
+      Us</button>
+  </footer>
+
+
+
+  <!-- <div id="cointainerheader" class="div-class row">This is task page</div>
+  <div id="containerbody" class="row">
+    <div id="body1" class="div-class col-sm-2"></div>
+  </div>
+
+  <div id="cointainerheader" class="row col-sm-6" style="margin-left:20px; ;"> This is Header</div>
+  <div id="containercolumn" class="row">
+    <div id="body1" class="div-class col-sm-10" style="border-color: red;text-align: center;">This is column Header
+    </div>
+  </div>
+
+  <div id="containerbody" class="row">
+    <div id="body1" class="div-class col-sm-4" style="height: 350px;border-color: green; text-align: center;">Body1
+    </div>
+    <div id="body2" class="div-class col-sm-6" style="height: 350px;border-color: green; text-align: centre;">Body2
+      <div id="body3" class="div-class col-sm-12" style="height: 150px;border-color: blue;text-align: centre;">Body3
+      </div>
+      <div id="body3" class="div-class col-sm-12" style="height: 150px;border-color: blue;text-align: centre;">Body4
+      </div>
+    </div>
+  </div>
+
+  <div id="containerfooter" class="row">
+    <div id="footer1" class="div-class col-sm-5" style="border-color: orangered; text-align: center;">Footer1</div>
+    <div id="footer2" class="div-class col-sm-5" style="border-color: orangered; text-align: center;">Footer2</div>
+  </div> -->
   <app-root></app-root>
 </body>
+
 </html>
